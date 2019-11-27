@@ -4,14 +4,16 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>React presentation</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<link rel="stylesheet" href="css/style.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -23,12 +25,164 @@
 		</script>
 	</head>
 	<body>
+
+
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section data-background-image="react.jpg">
+					<h1>React</h1>
+				</section>
+
+				<section>
+					<section data-background-image="react.jpg">
+						<h2>History</h2>
+					</section>
+					<section data-background-image="react.jpg">
+						<p>Creator:</p>
+						<img src="https://i2.wp.com/pbs.twimg.com/profile_images/702343843438424064/uNLC0ma9.jpg?ssl=1" alt="">
+					</section>
+					<section data-background-image="react.jpg">
+						<img src="https://i.ytimg.com/vi/GW0rj4sNH2w/maxresdefault.jpg" alt="">
+					</section>
+				</section>
+
+				<section data-background-image="react.jpg">
+					<section data-background-image="react.jpg">
+						<h2>Applications</h2>
+						<h3>that use ReactJS</h3>
+					</section>
+					<section data-background-image="react.jpg">
+						<ul class="examples-list">
+							<li> <p>Facebook</p>  <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/86aa3534498627.Y3JvcCw5NTUsNzQ3LDIwLDE.png" alt=""> </li>
+							<li> <p>Instagram</p>  <img src="https://itcomplex.kz/wp-content/uploads/2018/03/instagramm-clipart-svg-5.png" alt=""> </li>
+							<li> <p>Netflix</p>  <img src="https://stopga.me/images/blogs/2019/01/04/ENk8du4j.jpg" alt=""> </li>
+							<li> <p>WhatsApp</p>  <img src="https://www.freepngimg.com/thumb/whatsapp/77099-whats-icons-text-symbol-computer-messaging-whatsapp.png" alt=""> </li>
+							<li> <p>Dropbox</p>  <img src="http://pluspng.com/img-png/dropbox-png-if-you-dropbox-to-add-support-for-multiple-account-access-next-month-cloud-storage-960.png" alt=""> </li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-background-image="react.jpg">
+					<section>
+						<h2>Features</h2>
+					</section>
+					<section>
+						<p>Unidirectional data transfer</p>
+						<img src="https://miro.medium.com/max/1200/1*5EEFfqlZSOLC_w-dEfgf_Q.png" alt="">
+					</section>
+					<section>
+						<p>Virtual DOM</p>
+						<img src="https://miro.medium.com/max/928/1*CqdIWZy0NMPQhYx2rKzo9g.png" alt="">
+					</section>
+					<section>
+						<p>JSX</p>
+						<img src="https://user-images.githubusercontent.com/868251/60399633-fd2d9500-9b2c-11e9-97c9-35b1779caec9.gif" alt="">
+					</section>
+					<section>
+						<p>Life cycle methods</p>
+						<img src="https://i.stack.imgur.com/hg3nP.png" alt="">
+					</section>
+				</section>
+
+				<section data-background-image="react.jpg">
+
+					<section>
+						<h2>Unidirectional data transfer</h2>
+					</section>
+
+					<section>
+						<h3>Parent ➡️ Child — Props</h3>
+						<hr> <br>
+						<p>1. In the parent component, we transfer data from the state to the child.</p>
+						<img src="https://sun9-53.userapi.com/c858016/v858016717/ff212/nE8IRJrXixU.jpg" alt="">
+						<p>2. In the child component we accept and output</p>
+						<img src="https://sun9-60.userapi.com/c858016/v858016060/105d8f/3j1xt8BlNWg.jpg" alt="">
+					</section>
+
+					<section class="child-parent">
+						<h3>Parent ⬅️ Child — Callback</h3>
+						<hr>
+						<p>1. Create the updateData function in the parent. It has an input parameter value, we assign this parameter to the state of our component using the setState function. Boomerang is ready!</p>
+						<img src="https://sun9-66.userapi.com/c858016/v858016060/105dd0/YN6QesC-M1c.jpg" alt="">
+						<p>2. Pass the updateData function to the child through props. We launched a boomerang.</p>
+						<img src="https://sun9-14.userapi.com/c858016/v858016060/105df7/zopgztDHqKk.jpg" alt="">
+						<p>3. There is a button in the child element, when you click on it, the function that we passed using props will be called. A new parameter for the text is passed to her, and we want to pass it to the parent. Boomerang comes back.</p>
+						<img src="https://sun9-27.userapi.com/c858016/v858016060/105e50/qdEoaEvWq38.jpg" alt="">
+					</section>
+
+				</section>
+
+
+				<section data-background-image="react.jpg">
+					<section>
+						<h3>Virtual DOM</h3>
+					</section>
+					<section>
+						<img src="https://www.iflexion.com/files/content/research/x3_virtual_dom_react.png.pagespeed.ic.zik0tcCLhO.png" alt="">
+					</section>
+				</section>
+
+				<section data-background-image="react.jpg">
+					<section>
+						<h3>JSX</h3>
+					</section>
+					<section>
+						<p>Example</p>
+						<pre><code data-line-numbers>const element = <h1>Привет, мир!</h1>;</code></pre>
+					</section>
+					<section>
+						<p>Why JSX?</p>
+						<pre><code style="max-height:1000000px" data-line-numbers>function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);</code></pre>
+					</section>
+				</section>
+
+				<section data-background-image="react.jpg">
+					<section>
+						<h3>Life cycle methods</h3>
+					</section>
+
+					<section>
+						<img src="https://sun9-55.userapi.com/c856020/v856020480/1853a3/EStp6ux4ldQ.jpg" alt="">
+					</section>
+				</section>
+
+				<section data-background-image="react.jpg">
+					<section>
+						<h2>Demand</h2>
+					</section>
+					<section>
+						<img src="https://iodocs.com/wp-content/uploads/2018/09/open-positions-react-vs-angular-vs-vue.png" alt="">
+					</section>
+				</section>
+
+
 			</div>
 		</div>
+
+
+			</div>
+		</div>
+
+
 
 		<script src="js/reveal.js"></script>
 

@@ -1,0 +1,16 @@
+.examples-list li {
+  display: flex;
+  justify-content: space-between;
+}
+.examples-list img {
+  width: 10%;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.child-parent p {
+  font-size: 20px;
+}
+.child-parent img {
+  width: 50%;
+}
